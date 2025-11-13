@@ -12,6 +12,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+background: radial-gradient(
+  circle,
+  rgba(255, 100, 180, 0.6),
+  rgba(180, 0, 255, 0.3),
+  transparent
+);
+box-shadow: 0 0 60px rgba(255, 80, 200, 0.5), 0 0 120px rgba(200, 0, 255, 0.2);
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
@@ -35,16 +42,23 @@ body {
 
 .pulse {
   position: absolute;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(255, 0, 150, 0.3), transparent);
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 200, 0.5),  /* soft aqua center */
+    rgba(0, 180, 255, 0.25), /* cool outer glow */
+    transparent
+  );
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.4), 0 0 120px rgba(0, 255, 200, 0.2);
   transition: transform 0.1s ease;
   z-index: 1;
 }
+
 
 .player-container {
   position: absolute;
