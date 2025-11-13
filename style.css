@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #6dd5ed);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.lyrics-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+#lyrics {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 0 0 15px rgba(255,255,255,0.8), 0 0 30px rgba(255,0,150,0.6);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.pulse {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 0, 150, 0.3), transparent);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.1s ease;
+  z-index: 1;
+}
+
+.player-container {
+  position: absolute;
+  bottom: 30px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
