@@ -14,7 +14,18 @@ const lyrics = [
   { time: 12, text: "Darling, just dive right in" },
   { time: 18, text: "And follow my lead" },
   { time: 25, text: "Well, I found a girl, beautiful and sweet" },
-  { time: 33, text: "I never knew you were the someone waiting for me" }
+  { time: 33, text: "I never knew you were the someone waiting for me" },
+  { time: 35, text: "PERFECT"},
+  { time: 40, text: "PERFECT"},
+  { time: 45, text: "PERFECT"},
+  { time: 50, text: "PERFECT"},
+  { time: 55, text: "PERFECT"},
+  { time: 60, text: "PERFECT"},
+  { time: 65, text: "PERFECT"},
+  { time: 70, text: "PERFECT"},
+  { time: 80, text: "PERFECT"},
+  { time: 90, text: "PERFECT"},
+  { time: 100, text: "PERFECT"},
 ];
 
 // 🎶 Variables
