@@ -4,7 +4,7 @@ const song = params.get("song") || "perfect";
 
 // Audio
 const audio = document.getElementById("audio");
-audio.src = `songs/${song}.mp3`;
+audio.src = `${song}.mp3`;
 
 // Lyrics
 fetch(`assets/${song}.json`)
