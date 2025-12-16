@@ -195,50 +195,62 @@
 <div class="vibe">vibehai</div>
 
 <script>
-    /* Generate 30 cards */
-    const row = document.getElementById("cardRow");
+  const row = document.getElementById("cardRow");
 
-    for (let i = 1; i <= 30; i++) {
-        const card = document.createElement("div");
-        card.className = "card";
+  // Song identifiers (must match mp3 + json filenames)
+  const songs = [
+    "perfect",
+    "lovestory",
+    "nightvibes",
+    "moonlight",
+    "softcore"
+  ];
 
-        card.innerHTML = `
-            <img src="https://source.unsplash.com/300x300/?aesthetic,anime,girl,${i}">
-            <div class="title">Playlist ${i}</div>
-        `;
+  for (let i = 0; i < 30; i++) {
+    const card = document.createElement("div");
+    card.className = "card";
 
-        card.addEventListener("click", () => {
-            window.location.href = "perfect.html";
-        });
+    const songName = songs[i % songs.length];
 
-        row.appendChild(card);
-    }
+    card.innerHTML = `
+      <img src="https://source.unsplash.com/300x300/?aesthetic,anime,girl,${i}">
+      <div class="title">${songName.toUpperCase()}</div>
+    `;
 
-    /* Floating music notes */
-    const notes = ['🎵','🎶','🎼','🎧'];
-    function createNote() {
-      const note = document.createElement('div');
-      note.classList.add('music-note');
-      note.textContent = notes[Math.floor(Math.random() * notes.length)];
-      note.style.left = Math.random() * 100 + 'vw';
-      note.style.animationDuration = (7 + Math.random() * 5) + 's';
-      document.body.appendChild(note);
-      setTimeout(() => note.remove(), 12000);
-    }
+    card.addEventListener("click", () => {
+      window.location.href = `perfect.html?song=${songName}`;
+    });
 
-    /* Sparkles */
-    function createSparkle() {
-      const sparkle = document.createElement('div');
-      sparkle.classList.add('sparkle');
-      sparkle.style.left = Math.random() * 100 + 'vw';
-      sparkle.style.animationDuration = (3 + Math.random() * 3) + 's';
-      document.body.appendChild(sparkle);
-      setTimeout(() => sparkle.remove(), 7000);
-    }
+    row.appendChild(card);
+  }
 
-    setInterval(createNote, 550);     // More frequent
-    setInterval(createSparkle, 300);  // More sparkles
+  /* Floating music notes */
+  const notes = ['🎵','🎶','🎼','🎧'];
+  function createNote() {
+    const note = document.createElement('div');
+    note.classList.add('music-note');
+    note.textContent = notes[Math.floor(Math.random() * notes.length)];
+    note.style.left = Math.random() * 100 + 'vw';
+    note.style.animationDuration = (7 + Math.random() * 5) + 's';
+    document.body.appendChild(note);
+    setTimeout(() => note.remove(), 12000);
+  }
+
+  /* Sparkles */
+  function createSparkle() {
+    const sparkle = document.createElement('div');
+    sparkle.classList.add('sparkle');
+    sparkle.style.left = Math.random() * 100 + 'vw';
+    sparkle.style.animationDuration = (3 + Math.random() * 3) + 's';
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 7000);
+  }
+
+  setInterval(createNote, 550);
+  setInterval(createSparkle, 300);
 </script>
+
 
 </body>
 </html>
+
