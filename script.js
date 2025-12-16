@@ -4,10 +4,10 @@ const song = params.get("song") || "perfect";
 
 // Audio
 const audio = document.getElementById("audio");
-audio.src = `/${song}.mp3`;
+audio.src = `songs/${song}.mp3`;
 
 // Lyrics
-fetch(`lyrics/${song}.json`)
+fetch(`assets/${song}.json`)
   .then(res => res.json())
   .then(data => {
     document.getElementById("lyrics").innerText = data.lyrics;
