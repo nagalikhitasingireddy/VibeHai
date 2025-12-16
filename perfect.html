@@ -7,22 +7,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="background"></div>
   <canvas id="sparkleCanvas"></canvas>
 
   <div class="lyrics-container">
     <div class="pulse"></div>
-    <h1 id="lyrics"></h1>
+    <h1 id="lyrics">Loading lyrics...</h1>
   </div>
 
-  <!-- ✅ Old Working Audio Player -->
+  <!-- Dynamic Audio Player -->
   <div class="player-container">
-    <audio id="audio" controls>
-      <source src="perfect.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <audio id="audio" controls autoplay></audio>
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
